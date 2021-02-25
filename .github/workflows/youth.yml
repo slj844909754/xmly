@@ -34,7 +34,8 @@ jobs:
       - name: '运行 【中青看点】'
         if: env.YOUTH_HEADER
         run: |
-          node Task/youth.js
+          cd ~/Task
+          node youth.js
         env:
           YOUTH_NOTIFY_CONTROL: ${{ secrets.YOUTH_NOTIFY_CONTROL }}
           TZ: Asia/shanghai
